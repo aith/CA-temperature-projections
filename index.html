@@ -1,0 +1,13 @@
+<div id="observablehq-viewof-model-b14e2614"></div>
+<div id="observablehq-viewof-chart-b14e2614"></div>
+<p>Credit: <a href="https://observablehq.com/@aith/coastal-chart-prototype/6">coastal chart prototype by Ari</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@aith/coastal-chart-prototype/6.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof model") return new Inspector(document.querySelector("#observablehq-viewof-model-b14e2614"));
+  if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-b14e2614"));
+  return ["renderDetail","chart","anoSouth","meanSouth","currYearIdx","legend","currYear"].includes(name);
+});
+</script>
